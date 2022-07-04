@@ -1,0 +1,10 @@
+References:
+https://www.noahnash.net/blog/joplin-apple-silicon/
+https://discourse.joplinapp.org/t/running-joplin-on-apple-silicon/11455
+
+ln -sf /opt/homebrew/bin/python3 /usr/local/bin/python
+yarn install
+cd packages/app-desktop
+yarn start 
+# if it runs successfully, time to package
+yarn run dist --publish=never --mac --arm64
